@@ -114,7 +114,7 @@ const Forms = ({saveItem}) => {
       <form className="row" onSubmit={submitHandler}>
       <div className="mb-3 col-md-6">
         <Label>اسم المبرمج</Label>
-        <Input type={"text"} onChange={e=>setTitle(e.target.value)} value={title} className="form-control addTitle" placeholder="مثلاً علاء"/>
+        <Input type={"text"} onChange={e=>setTitle(e.target.value)} value={title} className="form-control addTitle" placeholder="مثلاً علاء مبارك"/>
       </div>
       <div className=" col-md-6 mt-4 pt-2">
         {/* <Label>المطعم</Label>
