@@ -8,6 +8,7 @@ import Forms from '../Form/Forms';
 import Label from '../Form/Label';
 import Input from '../Form/Input';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Edit = ({updateItem,data}) => {
   const [show, setShow] = useState(false);
@@ -22,9 +23,10 @@ const Edit = ({updateItem,data}) => {
   let DataUpdate={id,title,date,value,description,totalPrice}
   let handleSubmit = (e) => {
     e.preventDefault();
-    updateItem(id, DataUpdate);
     console.log(DataUpdate, id);
-    
+    if (checkData()) {
+    updateItem(id, DataUpdate);
+    }
     axios.put(`https://expenses-app-32e19-default-rtdb.firebaseio.com/CRUD/${id}.json`, DataUpdate)
       .then(res => {
         console.log("Success Edit");
@@ -37,6 +39,36 @@ const Edit = ({updateItem,data}) => {
   useEffect(()=>{
     handleClose()
   },[data])
+  let checkData = () => {
+    if (title === "" || date === "" || value === "" || description === "" || totalPrice === "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'ادخل كافة التفاصيل مثل السعر والاسم',
+      });
+      return false;
+    }
+  
+    if (description.length > 20) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'وصف الطلب يجب أن يكون أقل من 30 حرفًا',
+      });
+      return false;
+    }
+  
+    if (Number(value) > Number(totalPrice)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'يجب ان تكون قيمة طلبك اقل من او تساوي المبلغ المدفوع',
+      });
+      return false;
+    }
+  
+    return true;
+  }
   return (
     <>
       <Button variant="" className="d-flex justify-content-between align-items-center" onClick={handleShow}>
