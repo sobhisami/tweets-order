@@ -50,7 +50,7 @@ const Forms = ({saveItem}) => {
       setTotalPrice("")
     }
     let checkData=()=>{
-      if (title!="" && date!="" && value!="" && description!="",totalPrice!="",value<totalPrice) {
+      if (title!="" && date!="" && value!="" && description!="" && totalPrice!="" && value<totalPrice) {
         return true;
         }else{
           Swal.fire({
