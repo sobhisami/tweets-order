@@ -37,7 +37,7 @@ const Forms = ({saveItem}) => {
           })
           Toast.fire({
             icon: 'success',
-            title: 'successfully Add'
+            title: 'تم طلب فطورك جهز فلوسك'
           })
         }
      
