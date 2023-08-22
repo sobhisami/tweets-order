@@ -48,8 +48,8 @@ const Forms = ({saveItem}) => {
       setDescription("")
     }
     let checkData=()=>{
-      if (title!="" && date!="" && value!="" && description!="",totalPrice!="") {
-          return true;
+      if (title!="" && date!="" && value!="" && description!="",totalPrice!="" ,value<totalPrice) {
+        return true;
         }else{
           Swal.fire({
             icon: 'error',
