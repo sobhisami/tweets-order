@@ -49,17 +49,64 @@ const Forms = ({saveItem}) => {
       setDescription("")
       setTotalPrice("")
     }
-    let checkData=()=>{
-      if (title!="" && date!="" && value!="" && description!="" && totalPrice!="" && value<totalPrice) {
-        return true;
-        }else{
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'ادخل كافة التفاصيل مثل السعر والاسم',
-          })
-        }
+    // let checkData=()=>{
+    //   if (title!="" && date!="" && value!="" && description!="" && totalPrice!="") {
+    //     return true;
+    //     }else{
+    //       Swal.fire({
+    //         icon: 'error',
+    //         title: 'Oops...',
+    //         text: 'ادخل كافة التفاصيل مثل السعر والاسم',
+    //       })
+    //     }
+    //     if (description.length > 30) {
+    //       Swal.fire({
+    //         icon: 'error',
+    //         title: 'Oops...',
+    //         text: 'وصف الطلب يجب أن يكون أقل من 30 حرفًا',
+    //       });
+    //       return false;
+    //     }
+    //     if (value>totalPrice) {
+    //       Swal.fire({
+    //         icon: 'error',
+    //         title: 'Oops...',
+    //         text: 'يجب ان تكون قيمة طلبك اقل من او تساوي المبلغ المضاف',
+    //       });
+    //       return false;
+    //     }
+    //   }
+    let checkData = () => {
+      if (title === "" || date === "" || value === "" || description === "" || totalPrice === "") {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'ادخل كافة التفاصيل مثل السعر والاسم',
+        });
+        return false;
       }
+    
+      if (description.length > 20) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'وصف الطلب يجب أن يكون أقل من 30 حرفًا',
+        });
+        return false;
+      }
+    
+      if (Number(value) > Number(totalPrice)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'يجب ان تكون قيمة طلبك اقل من او تساوي المبلغ المدفوع',
+        });
+        return false;
+      }
+    
+      return true;
+    }
+    
 
     let id =  Math.floor(Math.random() * 200) + 1;
     let Data={id,title,date,value,description,totalPrice}
