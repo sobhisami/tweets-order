@@ -19,6 +19,7 @@ const Forms = ({saveItem}) => {
           .then(res=>{
             Data.id=res.data.name;
             console.log("success adding");
+            EmptyData()
           }).catch(err=>{
             console.log(err);
           })
@@ -39,16 +40,17 @@ const Forms = ({saveItem}) => {
             title: 'successfully Add'
           })
         }
-      EmptyData()
+     
     }
     let EmptyData=()=>{
       setTitle("")
       setDate("")
       setValue("")
       setDescription("")
+      setTotalPrice("")
     }
     let checkData=()=>{
-      if (title!="" && date!="" && value!="" && description!="",totalPrice!="" ,value<totalPrice) {
+      if (title!="" && date!="" && value!="" && description!="",totalPrice!="",value<totalPrice) {
         return true;
         }else{
           Swal.fire({
@@ -82,7 +84,7 @@ const Forms = ({saveItem}) => {
       </div>
       <div className="mb-3 col-md-6">
         <Label>قيمة طلبك بالشيكل</Label>
-        <Input type={'number'} onChange={e=>setValue(e.target.value)} value={value} className="form-control addValue py-2" placeholder="0"/>
+        <Input type={'number'} onChange={e=>setValue(e.target.value)} value={value} className="form-control addValue py-2" />
       </div>
       <div className="mb-3 col-md-12 text-right p-3">
         <button type="submit" className="btn btn-primary addBtn px-5" >طلب</button>
