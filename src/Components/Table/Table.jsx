@@ -1,10 +1,10 @@
 import Trow from "./Trow"
-
+import style from "./style.module.css"
 
 const Table = ({dataSet,DeleteItem,updateItem,tableId}) => {
 
   return (
-    <table id={tableId}  className="table table-responsive" >
+    <table id={tableId}  className={`table table-responsive ${style.tableSmall}`} >
     <thead>
       <tr className="text-center">
         <th> الاسم</th>

@@ -1,0 +1,6 @@
+@media (max-width:500px) {
+    .tableSmall{
+        overflow-x: scroll !important;
+        display: block !important;
+    }
+}
