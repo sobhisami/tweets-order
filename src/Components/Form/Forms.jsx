@@ -86,7 +86,7 @@ const Forms = ({saveItem}) => {
         return false;
       }
     
-      if (description.length > 20) {
+      if (description.length > 50) {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
