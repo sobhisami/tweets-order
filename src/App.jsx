@@ -59,18 +59,21 @@
           const tableElement = document.getElementById("printableTable");
         
           const clonedTable = tableElement.cloneNode(true);
-          const lastColumnIndex = clonedTable.rows[0].cells.length - 1;
+          const lastColumnIndex = 2; // Index of the third column (0-based)
           
           for (let row of clonedTable.rows) {
-            row.deleteCell(lastColumnIndex);
+              for (let columnIndex = row.cells.length - 1; columnIndex > lastColumnIndex; columnIndex--) {
+                  row.deleteCell(columnIndex);
+              }
           }
+          
           clonedTable.style.borderCollapse = 'collapse'; 
           clonedTable.dir = 'rtl'; 
         
           const cells = clonedTable.getElementsByTagName('td');
           for (let cell of cells) {
-            cell.style.border = '1px solid black';
-            cell.style.padding = '8px'; 
+              cell.style.border = '1px solid black';
+              cell.style.padding = '8px'; 
           }
         
           const tableContent = clonedTable.outerHTML;
@@ -78,7 +81,8 @@
           printFrame.document.body.innerHTML = `<table>${tableContent}</table>`;
           printFrame.window.focus();
           printFrame.window.print();
-        };
+      };
+      
         const settings = {
           dots: true, 
           fade: true,

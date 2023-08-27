@@ -131,7 +131,7 @@ const Forms = ({saveItem}) => {
 ساندويتش فلافل مع حمص"/>
       </div>
       <div className="mb-3 col-md-6">
-        <Label>  المبلغ المتبقي في حسابك</Label>
+        <Label> المبلغ المدفوع </Label>
         <Input type={'number'} onChange={e=>setTotalPrice(e.target.value)} value={totalPrice} className="form-control addValue py-2" placeholder="مثلاً 20 "/>
       </div>
       <div className="mb-3 col-md-6">
