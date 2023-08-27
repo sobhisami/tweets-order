@@ -1,8 +1,14 @@
-  import 'bootstrap/dist/css/bootstrap.min.css';
-  import logo from './image/kittions.jpg'
+  import 'bootstrap/dist/css/bootstrap.css';
+  import 'bootstrap/dist/js/bootstrap.js';
+  import logo from './image/almalky.jpg'
+  import logo2 from './image/shobak.jpg'
+  import logo3 from './image/tibat.jpg'
   import { Forms, Input, Label, Table } from './Components';
   import { useEffect, useState } from 'react';
   import axios from 'axios';
+  import Slider from 'react-slick'; 
+  import "slick-carousel/slick/slick.css";
+  import "slick-carousel/slick/slick-theme.css"; 
   const App = ({tableId}) => {
     let [dataSet,setDateSet]=useState([]);
     let [search,setSearch]=useState("");
@@ -73,13 +79,34 @@
           printFrame.window.focus();
           printFrame.window.print();
         };
-  
+        const settings = {
+          dots: true, 
+          fade: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        };
     return (
       <div className="container mt-5">
         <div className="row">
-        <div className="col-sm-6 pt-4">
+        {/* <div className="col-sm-6 pt-4">
           <img src={logo}className="img-fluid rounded-5" alt=""/>
-        </div>
+        </div> */}
+        <div className='col-sm-6 pt-4'>
+              <h2 className='text-center'>المنيو</h2>
+              <Slider {...settings}>
+                <div>
+                  <img src={logo}  style={{height:"450px",width:"100%",objectFit:"contain"}} className='img-fluid rounded-5' />
+                </div>
+                <div>
+                  <img src={logo2}  className='img-fluid rounded-5' style={{height:"450px",width:"100%",objectFit:"contain"}} />
+                </div>
+                <div>
+                  <img src={logo3} className='img-fluid rounded-5' style={{height:"450px",width:"100%",objectFit:"contain"}} />
+                </div>
+              </Slider>
+          </div>
         <div className="col-sm-6 mt-5" dir="rtl">
           <div className="row">
             <h4 className=""> أطلب فطورك  </h4>

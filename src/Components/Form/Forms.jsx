@@ -117,8 +117,6 @@ const Forms = ({saveItem}) => {
         <Input type={"text"} onChange={e=>setTitle(e.target.value)} value={title} className="form-control addTitle" placeholder="مثلاً علاء مبارك"/>
       </div>
       <div className=" col-md-6 mt-4 pt-2">
-        {/* <Label>المطعم</Label>
-        <Input type={'text'} onChange={e=>setDate(e.target.value)} value={date} className="form-control addDate" placeholder="زهران او الطيبات"/>  */}
         <select onChange={e=>setDate(e.target.value)} value={date} className="form-select form-select" aria-label=".form-select-lg example">
           <option  defaultValue="اختار المطعم" >اختار المطعم</option>
           <option value="زهران">زهران</option>
@@ -133,7 +131,7 @@ const Forms = ({saveItem}) => {
 ساندويتش فلافل مع حمص"/>
       </div>
       <div className="mb-3 col-md-6">
-        <Label>  المبلغ المدفوع بالشيكل</Label>
+        <Label>  المبلغ المتبقي في حسابك</Label>
         <Input type={'number'} onChange={e=>setTotalPrice(e.target.value)} value={totalPrice} className="form-control addValue py-2" placeholder="مثلاً 20 "/>
       </div>
       <div className="mb-3 col-md-6">
