@@ -23,9 +23,9 @@ const Login = () => {
         <form class="right col-md-6">
             <h5 className='py-4 text-center'> Tweet Tec</h5>
             <div class="pt-5 text-center">
-                <input type="text" placeholder="رقم الجوال"/>   
+                {/* <input type="text" placeholder="رقم الجوال"/>    */}
                 <br/>
-                <input type="password" placeholder="password"/>
+                {/* <input type="password" placeholder="password"/> */}
             </div>
                 <br/><br/>
                 {/* <div class="remember-me--forget-password ">

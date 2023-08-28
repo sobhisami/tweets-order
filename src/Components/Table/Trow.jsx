@@ -43,9 +43,9 @@ const Trow = ({data,DeleteItem,updateItem}) => {
         <FontAwesomeIcon icon={faTrashAlt}/>
         </a> */}
         <td className="text-right d-flex">
-        <a href="#" className="delete mx-2" >
+        {/* <a href="#" className="delete mx-2" >
           <Edit updateItem={updateItem} data={data}/>
-        </a>
+        </a> */}
         </td>
     </tr>
   )
