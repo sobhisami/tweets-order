@@ -27,7 +27,7 @@ const Login = () => {
                 <br/>
                 <input type="password" placeholder="password"/>
             </div> */}
-                <br/><br/>
+                {/* <br/><br/> */}
                 {/* <div class="remember-me--forget-password ">
                   <label>
                     <input type="checkbox" name="item" checked/>
