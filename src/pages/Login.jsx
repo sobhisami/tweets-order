@@ -21,6 +21,9 @@ const Login = () => {
             </div>
         </div>
         <form class="right col-md-6">
+            <br />
+            <br />
+            <br />
             <h5 className='py-4 text-center'> <i>Tweet</i> </h5>
             {/* <div class="pt-5 text-center">
                 <input type="text" placeholder="رقم الجوال"/>   
@@ -35,7 +38,7 @@ const Login = () => {
                   </label>
                   <p>forget password?</p>
                 </div> */}
-              <div className="d-flex justify-content-center">
+              <div className="d-flex justify-content-center mt-5">
                 <button className="btn btn-success"onClick={goHome} >أطلب فطورك</button>  
               </div>
         </form>
