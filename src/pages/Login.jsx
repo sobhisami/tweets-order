@@ -22,11 +22,11 @@ const Login = () => {
         </div>
         <form class="right col-md-6">
             <h5 className='py-4 text-center'> Tweet Tec</h5>
-            <div class="pt-5 text-center">
-                {/* <input type="text" placeholder="رقم الجوال"/>    */}
+            {/* <div class="pt-5 text-center">
+                <input type="text" placeholder="رقم الجوال"/>   
                 <br/>
-                {/* <input type="password" placeholder="password"/> */}
-            </div>
+                <input type="password" placeholder="password"/>
+            </div> */}
                 <br/><br/>
                 {/* <div class="remember-me--forget-password ">
                   <label>
