@@ -6,9 +6,8 @@ import axios from "axios";
 import {MultiSelect,calculateTotalPrice} from "./MultiSelect";
 import { Almalky, shopak, altibat, zahran } from '../../Data/Data'
 
-const Forms = ({saveItem}) => {
+const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
     let   [title,setTitle]=useState("");
-    const [selectedMenu, setSelectedMenu] = useState('');
     const [selectedOptions, setSelectedOptions] = useState([]);
     let   [totalPrice,setTotalPrice]=useState("");
     // let   [value,setValue]=useState("");
@@ -53,10 +52,10 @@ const Forms = ({saveItem}) => {
     }
     let EmptyData=()=>{
       setTitle("")
-      setSelectedMenu("")
+      // setSelectedMenu("")
       // setValue("")
       setSelectedOptions("")
-      setTotalPrice("")
+      // setTotalPrice("")
     }
     // let checkData=()=>{
     //   if (title!="" && date!="" && value!="" && description!="" && totalPrice!="") {
@@ -150,7 +149,7 @@ const Forms = ({saveItem}) => {
       </div>
       <div className="mb-3 col-md-6">
         <Label>قيمة طلبك بالشيكل</Label>
-        <Input type={'number'}  value={calculateTotalPrice(selectedOptions)} className="form-control addValue py-2" disabled />
+        <Input type={'text'}  value={calculateTotalPrice(selectedOptions)} className="form-control addValue py-2" disabled />
         {/* <p className="text-center pt-2">{calculateTotalPrice(selectedOptions)}</p> */}
       </div>
       <div className="mb-3 col-md-12 text-right p-3">

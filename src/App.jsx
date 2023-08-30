@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
   import logo from './image/almalky.jpg'
   import logo2 from './image/shobak.jpg'
   import logo3 from './image/tibat.jpg'
+  import logo4 from "./image/zahran.jpg"
   import axios from 'axios';
   import Slider from 'react-slick'; 
   import "slick-carousel/slick/slick.css";
@@ -12,7 +13,8 @@ import { useEffect, useState } from 'react';
   const App = ({tableId}) => {
     let [dataSet,setDateSet]=useState([]);
     let [search,setSearch]=useState("");
-
+    const [selectedMenu, setSelectedMenu] = useState('');
+    
       let saveItem=(data)=>{
         setDateSet([data,...dataSet])
       }
@@ -60,28 +62,35 @@ import { useEffect, useState } from 'react';
         
           const clonedTable = tableElement.cloneNode(true);
           const lastColumnIndex = 2; // Index of the third column (0-based)
-          
+        
           for (let row of clonedTable.rows) {
-              for (let columnIndex = row.cells.length - 1; columnIndex > lastColumnIndex; columnIndex--) {
-                  row.deleteCell(columnIndex);
-              }
+            for (let columnIndex = row.cells.length - 1; columnIndex > lastColumnIndex; columnIndex--) {
+              row.deleteCell(columnIndex);
+            }
           }
-          
-          clonedTable.style.borderCollapse = 'collapse'; 
-          clonedTable.dir = 'rtl'; 
+        
+          clonedTable.style.borderCollapse = 'collapse';
+          clonedTable.dir = 'rtl';
+          clonedTable.style.margin = '0 auto'; // Center the table horizontally
         
           const cells = clonedTable.getElementsByTagName('td');
           for (let cell of cells) {
-              cell.style.border = '1px solid black';
-              cell.style.padding = '8px'; 
+            cell.style.border = '1px solid black';
+            cell.style.padding = '10px'; 
+            cell.style.fontSize = '16px'; 
+            cell.style.fontWeight = 'bold';
           }
+        
+          clonedTable.style.width = '80%'; 
+          clonedTable.style.marginTop = '20px'; 
         
           const tableContent = clonedTable.outerHTML;
         
           printFrame.document.body.innerHTML = `<table>${tableContent}</table>`;
           printFrame.window.focus();
           printFrame.window.print();
-      };
+        };
+        
       
         const settings = {
           dots: true, 
@@ -100,16 +109,32 @@ import { useEffect, useState } from 'react';
         <div className='col-sm-6 pt-4'>
               <h2 className='text-center'>المنيو</h2>
               <Slider {...settings}>
-                <div>
-                  <img src={logo}  style={{height:"450px",width:"100%",objectFit:"contain"}} className='img-fluid rounded-5' />
-                </div>
-                <div>
-                  <img src={logo2}  className='img-fluid rounded-5' style={{height:"450px",width:"100%",objectFit:"contain"}} />
-                </div>
-                <div>
-                  <img src={logo3} className='img-fluid rounded-5' style={{height:"450px",width:"100%",objectFit:"contain"}} />
-                </div>
-              </Slider>
+              {selectedMenu === '' && (
+                    <div>
+                      <img src={logo4} style={{ height: "450px", width: "100%", objectFit: "contain" }} className='img-fluid rounded-5' />
+                    </div>
+                  )}
+              {selectedMenu === 'زهران' && (
+                    <div>
+                      <img src={logo4} style={{ height: "450px", width: "100%", objectFit: "contain" }} className='img-fluid rounded-5' />
+                    </div>
+                  )}
+                  {selectedMenu === 'الملكي' && (
+                    <div>
+                      <img src={logo} style={{ height: "450px", width: "100%", objectFit: "contain" }} className='img-fluid rounded-5' />
+                    </div>
+                  )}
+                  {selectedMenu === 'الطيبات' && (
+                    <div>
+                      <img src={logo3} className='img-fluid rounded-5' style={{ height: "450px", width: "100%", objectFit: "contain" }} />
+                    </div>
+                  )}
+                  {selectedMenu === 'شبيك لبيك' && (
+                    <div>
+                      <img src={logo2} className='img-fluid rounded-5' style={{ height: "450px", width: "100%", objectFit: "contain" }} />
+                    </div>
+                  )}
+  </Slider>
           </div>
         <div className="col-sm-6 mt-5" dir="rtl">
           <div className="row">
@@ -118,7 +143,7 @@ import { useEffect, useState } from 'react';
               اطلب فطورك من مطعم زهران او الطيبات او شبيك لبيك او الملكي
             </p>
           </div>
-          <Forms saveItem={saveItem}/>
+          <Forms saveItem={saveItem} selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu}/>
         </div>
         </div>
         
