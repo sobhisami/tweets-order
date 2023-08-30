@@ -8,33 +8,33 @@ const Login = () => {
    Navigate("/home")
   }
   return (
-    <div class="box-form p-4 mt-5 body-bg">
-        <div class="left col-md-6">
-            <div class="overlay">
+    <div className="box-form p-4 mt-5 body-bg">
+        <div className="left col-md-6">
+            <div className="overlay">
               <h1 className='text-center'>صباحك فل</h1>
               <p className='text-center text-black-50'>الانتاج السليم ف الاكل السليم</p>
               <span className='d-flex justify-content-center'>
                 {/* <p>login with social media</p> */}
-                {/* <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> */}
+                {/* <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a> */}
                 <a href="#"><img src={logo} alt="" /></a>
               </span>
             </div>
         </div>
-        <form class="right col-md-6">
+        <form className="right col-md-6">
             <br />
             <br />
             <br />
             <h5 className='py-4 text-center'> <i>Tweet</i> </h5>
-            {/* <div class="pt-5 text-center">
+            {/* <div className="pt-5 text-center">
                 <input type="text" placeholder="رقم الجوال"/>   
                 <br/>
                 <input type="password" placeholder="password"/>
             </div> */}
                 {/* <br/><br/> */}
-                {/* <div class="remember-me--forget-password ">
+                {/* <div className="remember-me--forget-password ">
                   <label>
                     <input type="checkbox" name="item" checked/>
-                    <span class="text-checkbox">Remember me</span>
+                    <span className="text-checkbox">Remember me</span>
                   </label>
                   <p>forget password?</p>
                 </div> */}

@@ -34,15 +34,20 @@ const Trow = ({data,DeleteItem,updateItem}) => {
   return (
     <tr className="text-center">
       <td> {data.title} </td>
-      <td>{data.date}</td>
-      <td> {data.description} </td>
+      <td>{data.selectedMenu}</td>
+      <td>
+        {data.selectedOptions.map((option, index) => (
+            <span key={index}>{option.product}
+            {index < data.selectedOptions.length - 1 && <br />}
+            </span>
+          ))} 
+      </td>
       <td>{data.totalPrice}ش</td>
-      <td>{data.value} ش</td>
-      <td>{data.totalPrice-data.value} شيكل</td>
-      {/* <td  className="text-right d-flex" style={{cursor: "pointer"}}><a   onClick={onDelete} href="#" className="delete pt-1" >
+      <td>{data.price} ش</td>
+      <td>{data.totalPrice-data.price} شيكل</td>
+      <td  className="text-right d-flex" style={{cursor: "pointer"}}><a   onClick={onDelete} href="#" className="delete pt-1" >
         <FontAwesomeIcon icon={faTrashAlt}/>
-        </a> */}
-        <td className="text-right d-flex">
+        </a>
         {/* <a href="#" className="delete mx-2" >
           <Edit updateItem={updateItem} data={data}/>
         </a> */}

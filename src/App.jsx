@@ -1,10 +1,10 @@
+import { Forms, Input, Label, Table } from './Components';
+import { useEffect, useState } from 'react';
   import 'bootstrap/dist/css/bootstrap.css';
   import 'bootstrap/dist/js/bootstrap.js';
   import logo from './image/almalky.jpg'
   import logo2 from './image/shobak.jpg'
   import logo3 from './image/tibat.jpg'
-  import { Forms, Input, Label, Table } from './Components';
-  import { useEffect, useState } from 'react';
   import axios from 'axios';
   import Slider from 'react-slick'; 
   import "slick-carousel/slick/slick.css";
@@ -53,7 +53,7 @@
         // }
       // }
       //   return search ? dataSet.filter(e=>e.title.toLowerCase().includes(search.toLowerCase())):  dataSet
-        let searchHandler=  search ? dataSet.filter(e=>e.date.toLowerCase().includes(search.toLowerCase()) ||e.title.toLowerCase().includes(search.toLowerCase()) ):  dataSet
+        let searchHandler=  search ? dataSet.filter(e=>e.selectedMenu.toLowerCase().includes(search.toLowerCase()) ||e.title.toLowerCase().includes(search.toLowerCase()) ):  dataSet
         const printTable = () => {
           const printFrame = window.frames["print_frame"];
           const tableElement = document.getElementById("printableTable");
