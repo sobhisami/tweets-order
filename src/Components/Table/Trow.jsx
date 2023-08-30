@@ -45,13 +45,13 @@ const Trow = ({data,DeleteItem,updateItem}) => {
       <td>{data.totalPrice}ش</td>
       <td>{data.price} ش</td>
       <td>{data.totalPrice-data.price} شيكل</td>
-      <td  className="text-right d-flex" style={{cursor: "pointer"}}><a   onClick={onDelete} href="#" className="delete pt-1" >
+      {/* <td  className="text-right d-flex" style={{cursor: "pointer"}}><a   onClick={onDelete} href="#" className="delete pt-1" >
         <FontAwesomeIcon icon={faTrashAlt}/>
         </a>
-        {/* <a href="#" className="delete mx-2" >
+        <a href="#" className="delete mx-2" >
           <Edit updateItem={updateItem} data={data}/>
-        </a> */}
-        </td>
+        </a>
+        </td> */}
     </tr>
   )
 }
