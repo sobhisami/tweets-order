@@ -28,7 +28,6 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
            Data.selectedOptions.map((elem)=>{
               delete elem.label;
           });
-
           axios.post("https://expenses-app-32e19-default-rtdb.firebaseio.com/CRUD.json",Data)
           .then(res=>{
             Data.id=res.data.name;
