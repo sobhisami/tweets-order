@@ -36,11 +36,11 @@ const Trow = ({data,DeleteItem,updateItem}) => {
       <td> {data.title} </td>
       <td>{data.selectedMenu}</td>
       <td>
-        {data.selectedOptions.map((option, index) => (
-            <span key={index}>{option.product}
-            {index < data.selectedOptions.length - 1 && <br />}
-            </span>
-          ))} 
+          {data.selectedOptions.map((option, index) => (
+              <span key={index}>{option.quantity} {option.product} 
+              {index < data.selectedOptions.length - 1 && <br />}
+              </span>
+            ))} 
       </td>
       <td>{data.totalPrice}ش</td>
       <td>{data.price} ش</td>

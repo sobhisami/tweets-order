@@ -10,22 +10,24 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
     let   [title,setTitle]=useState("");
     const [selectedOptions, setSelectedOptions] = useState([]);
     let   [totalPrice,setTotalPrice]=useState("");
-    // let   [value,setValue]=useState("");
     const [totalProductsPrice, setTotalProductsPrice] = useState(0);
     const handleMenuChange = event => {
       setSelectedMenu(event.target.value);
-      setSelectedOptions([]); // Reset selected options when menu changes
+      setSelectedOptions([]); 
     };
     const handleMultiSelectChange = selectedValues => {
         setSelectedOptions(selectedValues);
     };
     let submitHandler=(e)=>{
-      e.preventDefault()
-      console.log(Data);
+        e.preventDefault()
+        console.log(Data);
+        console.log(selectedOptions);
+        // console.log("Data:", JSON.stringify({ id, title, selectedMenu, totalPrice, price,selectedOptions}, null, 2));
         if (checkData()) {
           axios.post("https://expenses-app-32e19-default-rtdb.firebaseio.com/CRUD.json",Data)
           .then(res=>{
             Data.id=res.data.name;
+            console.log(res);
             console.log("success adding");
             EmptyData()
           }).catch(err=>{
@@ -52,10 +54,10 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
     }
     let EmptyData=()=>{
       setTitle("")
-      // setSelectedMenu("")
+      setSelectedMenu("")
       // setValue("")
       setSelectedOptions("")
-      // setTotalPrice("")
+      setTotalPrice("")
     }
     // let checkData=()=>{
     //   if (title!="" && date!="" && value!="" && description!="" && totalPrice!="") {
@@ -94,14 +96,14 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
         return false;
       }
     
-      // if (description.length > 50) {
-      //   Swal.fire({
-      //     icon: 'error',
-      //     title: 'Oops...',
-      //     text: 'وصف الطلب يجب أن يكون أقل من 30 حرفًا',
-      //   });
-      //   return false;
-      // }
+      // // if (description.length > 50) {
+      // //   Swal.fire({
+      // //     icon: 'error',
+      // //     title: 'Oops...',
+      // //     text: 'وصف الطلب يجب أن يكون أقل من 30 حرفًا',
+      // //   });
+      // //   return false;
+      // // }
     
       if (calculateTotalPrice(selectedOptions) > Number(totalPrice)) {
         Swal.fire({
@@ -150,7 +152,6 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
       <div className="mb-3 col-md-6">
         <Label>قيمة طلبك بالشيكل</Label>
         <Input type={'text'}  value={calculateTotalPrice(selectedOptions)} className="form-control addValue py-2" disabled />
-        {/* <p className="text-center pt-2">{calculateTotalPrice(selectedOptions)}</p> */}
       </div>
       <div className="mb-3 col-md-12 text-right p-3">
         <button type="submit" className="btn btn-primary addBtn px-5" >طلب</button>
