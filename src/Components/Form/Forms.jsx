@@ -24,6 +24,12 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
         console.log(selectedOptions);
         // console.log("Data:", JSON.stringify({ id, title, selectedMenu, totalPrice, price,selectedOptions}, null, 2));
         if (checkData()) {
+
+          
+           Data.selectedOptions.map((elem)=>{
+              delete elem.label;
+          });
+
           axios.post("https://expenses-app-32e19-default-rtdb.firebaseio.com/CRUD.json",Data)
           .then(res=>{
             Data.id=res.data.name;
@@ -143,7 +149,7 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
             {selectedMenu === 'الطيبات' && <MultiSelect menuOptions={altibat} onChange={handleMultiSelectChange} value={selectedOptions} />}
             {selectedMenu === 'زهران' && <MultiSelect menuOptions={zahran} onChange={handleMultiSelectChange} value={selectedOptions} />}
             {selectedMenu === 'الملكي' && <MultiSelect  menuOptions={Almalky} onChange={handleMultiSelectChange} value={selectedOptions} />}
-            {selectedMenu === 'شبيك لبيك' && <MultiSelect menuOptions={shopak} onChange={handleMultiSelectChange} value={selectedOptions} />}
+            {selectedMenu === 'شبيك لبيك' && <MultiSelect menuOptions={shopak} onChange={handleMultiSelectChange} value={selectedOptions}  />}
       </div>
       <div className="mb-3 col-md-6">
         <Label> المبلغ المدفوع </Label>

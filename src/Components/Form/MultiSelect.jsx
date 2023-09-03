@@ -26,36 +26,21 @@ export let MultiSelect = ({ menuOptions, onChange, value }) => {
     }
   };
 
-  // const multiSelectOptions = menuOptions.map(item => ({
-  //   value: item.id,
-  //   label: (
-  //     <div>
-  //       {`${item.name} - ${item.price} ش`}
-  //       <button onClick={(e) => increase(e, item.id)}>+</button>
-  //       <span>{quantities[item.id] || 1}</span>
-  //       <button onClick={(e) => decrease(e, item.id)}>-</button>
-  //     </div>
-  //   ),
-  //   product: item.name,
-  //   price: item.price,
-  //   quantity: quantities[item.id] || 1,
-  // }));
-  const formatOptionLabel = ({ value, label, product, price }) => (
-    <div>
-      {label}
-      <button onClick={(e) => increase(e, value)}>+</button>
-      <span>{quantities[value] || 1}</span>
-      <button onClick={(e) => decrease(e, value)}>-</button>
-    </div>
-  );
-
-  const multiSelectOptions = menuOptions.map((item) => ({
+  const multiSelectOptions = menuOptions.map(item => ({
     value: item.id,
-    label: `${item.name} - ${item.price} ش`,
+    label: (
+      <div>
+        {`${item.name} - ${item.price} ش`}
+        <button onClick={(e) => increase(e, item.id)}>+</button>
+        <span>{quantities[item.id] || 1}</span>
+        <button onClick={(e) => decrease(e, item.id)}>-</button>
+      </div>
+    ),
     product: item.name,
     price: item.price,
     quantity: quantities[item.id] || 1,
   }));
+
 
   return (
     <Select
