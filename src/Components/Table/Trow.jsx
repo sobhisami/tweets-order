@@ -33,7 +33,7 @@ const Trow = ({data,DeleteItem,updateItem}) => {
 
   return (
     <tr className="text-center">
-      <td> {data.title} </td>
+      <td> {data.title.label} </td>
       <td>{data.selectedMenu}</td>
       <td>
           {data.selectedOptions.map((option, index) => (

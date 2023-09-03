@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import {MultiSelect,calculateTotalPrice} from "./MultiSelect";
 import { Almalky, shopak, altibat, zahran } from '../../Data/Data'
+import { Names } from "./Names";
 
 const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
     let   [title,setTitle]=useState("");
@@ -24,8 +25,6 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
         console.log(selectedOptions);
         // console.log("Data:", JSON.stringify({ id, title, selectedMenu, totalPrice, price,selectedOptions}, null, 2));
         if (checkData()) {
-
-          
            Data.selectedOptions.map((elem)=>{
               delete elem.label;
           });
@@ -122,7 +121,9 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
     
       return true;
     }
-    
+    let onChangeHandle=(selectedName)=>{
+      setTitle(selectedName);
+    }
     let id =  Math.floor(Math.random() * 200) + 1;
     let price=calculateTotalPrice(selectedOptions);
     let Data={id,title,selectedMenu,selectedOptions,totalPrice,price}
@@ -130,7 +131,8 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
       <form className="row" onSubmit={submitHandler}>
       <div className="mb-3 col-md-6">
         <Label>اسم المبرمج</Label>
-        <Input type={"text"} onChange={e=>setTitle(e.target.value)} value={title} className="form-control addTitle" placeholder="مثلاً علاء مبارك"/>
+        {/* <Input type={"text"} onChange={e=>setTitle(e.target.value)} value={title} className="form-control addTitle" placeholder="مثلاً علاء مبارك"/> */}
+        <Names onChange={onChangeHandle} values={title}/>
       </div>
       <div className=" col-md-6 mt-4 pt-2">
         <select  onChange={handleMenuChange}
