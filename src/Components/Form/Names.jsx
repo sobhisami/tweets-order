@@ -20,6 +20,8 @@ const options = [
   { value: 'مها', label: 'مها' },
   { value: 'معين زملط', label: 'معين زملط' },
   { value: 'صبحي فوجو', label: 'صبحي فوجو' },
+  { value: 'شخص', label: 'شخص' },
+  { value: 'اخر', label: 'اخر' },
 ];
 
  export const Names = ({onChange,values}) => {
