@@ -385,3 +385,59 @@ export const zahran=[
     price: 2,
   },
 ]
+//five menu drinks
+export const drink = [
+  {
+    id:'1',
+    name:'كولا كلوب',
+    price:1,
+  },
+  {
+    id:'7',
+    name:'سفن اب',
+    price:1,
+  },
+  {
+    id:'2',
+    name:'لبن اب',
+    price:1,
+  },
+  {
+    id:'3',
+    name:'عصير عنب ',
+    price:1,
+  },
+  {
+    id:'4',
+    name:'عصير برتقال ',
+    price:1,
+  },
+  {
+    id:'6',
+    name:'بسكوت',
+    price:2,
+  },
+];
+//sex menu sweets
+export const sweets = [
+  {
+    id:'1',
+    name:'صحن عربية صغير',
+    price:3,
+  },
+  {
+    id:'2',
+    name:' صحن عربية كبير',
+    price:5,
+  },
+  {
+    id:'3',
+    name:'نصف كيلو عربية',
+    price:10,
+  },
+  {
+    id:'4',
+    name:'كيلو عربية',
+    price:20,
+  },
+];

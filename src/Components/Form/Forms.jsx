@@ -4,7 +4,7 @@ import Label from "./Label"
 import Swal from "sweetalert2";
 import axios from "axios";
 import {MultiSelect,calculateTotalPrice} from "./MultiSelect";
-import { Almalky, shopak, altibat, zahran } from '../../Data/Data'
+import { Almalky, shopak, altibat, zahran,drink,sweets} from '../../Data/Data'
 import { Names } from "./Names";
 
 const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
@@ -141,6 +141,8 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
           <option value="الطيبات">الطيبات</option>
           <option value="شبيك لبيك">شبيك لبيك</option>
           <option value="الملكي"> الملكي</option>
+          <option value="مشروبات"> مشروبات</option>
+          <option value="كنافة"> كنافة ساق الله</option>
         </select>
       </div> 
       <div className="mb-3 col-md-12">
@@ -151,6 +153,8 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
             {selectedMenu === 'زهران' && <MultiSelect menuOptions={zahran} onChange={handleMultiSelectChange} value={selectedOptions} />}
             {selectedMenu === 'الملكي' && <MultiSelect  menuOptions={Almalky} onChange={handleMultiSelectChange} value={selectedOptions} />}
             {selectedMenu === 'شبيك لبيك' && <MultiSelect menuOptions={shopak} onChange={handleMultiSelectChange} value={selectedOptions}  />}
+            {selectedMenu === 'مشروبات' && <MultiSelect menuOptions={drink} onChange={handleMultiSelectChange} value={selectedOptions}  />}
+            {selectedMenu === 'كنافة' && <MultiSelect menuOptions={sweets} onChange={handleMultiSelectChange} value={selectedOptions}  />}
       </div>
       <div className="mb-3 col-md-6">
         <Label> المبلغ المدفوع </Label>

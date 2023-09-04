@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react';
   import logo2 from './image/shobak.jpg'
   import logo3 from './image/tibat.jpg'
   import logo4 from "./image/zahran.jpg"
+  import logo5 from "./image/drinks.jpg"
+  import logo6 from "./image/sweets.jpg"
+
   import axios from 'axios';
   import Slider from 'react-slick'; 
   import "slick-carousel/slick/slick.css";
@@ -132,6 +135,16 @@ import { useEffect, useState } from 'react';
                   {selectedMenu === 'شبيك لبيك' && (
                     <div>
                       <img src={logo2} className='img-fluid rounded-5' style={{ height: "450px", width: "100%", objectFit: "contain" }} />
+                    </div>
+                  )}
+                    {selectedMenu === 'مشروبات' && (
+                    <div>
+                      <img src={logo5} className='img-fluid rounded-5' style={{ height: "450px", width: "100%", objectFit: "contain" }} />
+                    </div>
+                  )}
+                        {selectedMenu === 'كنافة' && (
+                    <div>
+                      <img src={logo6} className='img-fluid rounded-5' style={{ height: "450px", width: "100%", objectFit: "contain" }} />
                     </div>
                   )}
   </Slider>
