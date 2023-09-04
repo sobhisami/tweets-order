@@ -55,7 +55,7 @@ import { useEffect, useState } from 'react';
         // }
       // }
       //   return search ? dataSet.filter(e=>e.title.toLowerCase().includes(search.toLowerCase())):  dataSet
-        let searchHandler=  search ? dataSet.filter(e=>e.selectedMenu.toLowerCase().includes(search.toLowerCase()) ||e.title.toLowerCase().includes(search.toLowerCase()) ):  dataSet
+        let searchHandler=  search ? dataSet.filter(e=>e.selectedMenu.toLowerCase().includes(search.toLowerCase()) ||e.title.label.toLowerCase().includes(search.toLowerCase()) ):  dataSet
         const printTable = () => {
           const printFrame = window.frames["print_frame"];
           const tableElement = document.getElementById("printableTable");
