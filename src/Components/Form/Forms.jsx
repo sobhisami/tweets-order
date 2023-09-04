@@ -141,7 +141,7 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
           <option value="الطيبات">الطيبات</option>
           <option value="شبيك لبيك">شبيك لبيك</option>
           <option value="الملكي"> الملكي</option>
-          <option value="مشروبات"> مشروبات</option>
+          <option value="مشروبات">  مشروبات و بسكوت</option>
           <option value="كنافة"> كنافة ساق الله</option>
         </select>
       </div> 
