@@ -393,6 +393,16 @@ export const drink = [
     price:1,
   },
   {
+    id:'9',
+    name:'كولا زيرو',
+    price:2,
+  },
+  {
+    id:'10',
+    name:'كولا دايت',
+    price:2,
+  },
+  {
     id:'7',
     name:'سفن اب',
     price:1,
