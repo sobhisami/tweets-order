@@ -417,6 +417,16 @@ export const drink = [
     name:'بسكوت',
     price:2,
   },
+  {
+    id:'7',
+    name:'شوكلاتة',
+    price:1,
+  },
+  {
+    id:'8',
+    name:'فستق',
+    price:1,
+  },
 ];
 //sex menu sweets
 export const sweets = [
