@@ -374,4 +374,9 @@ export const zahran=[
     name:"ساندويش فلافل سادة",
     price: 1,
   },
+  {
+    id : 9 ,
+    name:"فرشوحة فلافل",
+    price: 2,
+  },
 ]
