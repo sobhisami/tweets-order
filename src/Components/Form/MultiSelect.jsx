@@ -26,6 +26,10 @@ export let MultiSelect = ({ menuOptions, onChange, value }) => {
     }
   };
 
+  const customFilterOption = (option, searchText) => {
+    return option.data.product.toLowerCase().includes(searchText.toLowerCase());
+  };
+
   const multiSelectOptions = menuOptions.map(item => ({
     value: item.id,
     label: (
@@ -49,6 +53,8 @@ export let MultiSelect = ({ menuOptions, onChange, value }) => {
       isMulti
       onChange={onChange}
       value={value}
+      filterOption={customFilterOption}
+      isSearchable
     />
   );
 };
