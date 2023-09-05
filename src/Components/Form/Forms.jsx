@@ -129,7 +129,7 @@ const Forms = ({saveItem,selectedMenu,setSelectedMenu}) => {
     return (
       <form className="row" onSubmit={submitHandler}>
       <div className="mb-3 col-md-6">
-        <Label>اسم المبرمج</Label>
+        <Label>اختار/ي الاسم </Label>
         {/* <Input type={"text"} onChange={e=>setTitle(e.target.value)} value={title} className="form-control addTitle" placeholder="مثلاً علاء مبارك"/> */}
         <Names onChange={onChangeHandle} values={title}/>
       </div>

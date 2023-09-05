@@ -33,7 +33,7 @@ import { useEffect, useState } from 'react';
       let fetchData=()=>{
         axios.get("https://expenses-app-32e19-default-rtdb.firebaseio.com/CRUD.json")
         .then(res=>{
-        console.log(res.data);
+        // console.log(res.data);
         let Data=[];
         for(let key in res.data){
           let value = res.data[key];
