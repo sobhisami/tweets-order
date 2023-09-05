@@ -381,13 +381,13 @@ export const zahran=[
   },
   {
     id : 9 ,
-    name:"فرشوحة فلافل",
-    price: 2,
+    name:"ساندويش فلافل وسلطة ",
+    price: 1,
   },
   {
     id : 10 ,
-    name:"ساندويش فلافل وسلطة ",
-    price: 1,
+    name:"فرشوحة فلافل",
+    price: 2,
   },
 ]
 //five menu drinks
