@@ -394,6 +394,11 @@ export const zahran=[
     name:"خبز سادة",
     price: 1,
   },
+  {
+    id:'12',
+    name:'لبن اب',
+    price:1,
+  },
 ]
 //five menu drinks
 export const drink = [
