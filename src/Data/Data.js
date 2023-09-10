@@ -238,7 +238,7 @@ export const shopak= [
     name: "  بسطرمة +فلفل",
     price: 1 ,
   },
-        {
+  {
     id  :  32,
     name: "فينو جبنة k +زيتون",
     price: 2,

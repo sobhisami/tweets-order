@@ -21,7 +21,7 @@ const options = [
   { value: 'معين زملط', label: 'معين زملط' },
   { value: 'صبحي فوجو', label: 'صبحي فوجو' },
   { value: 'تامر', label: 'تامر' },
-  { value: 'اخر', label: 'اخر' },
+  { value: 'عبد الرحيم صافي ', label: 'عبد الرحيم صافي' },
 ];
 
  export const Names = ({onChange,values}) => {
