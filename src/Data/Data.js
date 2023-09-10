@@ -395,7 +395,22 @@ export const zahran=[
     price: 1,
   },
   {
-    id:'12',
+    id : 12,
+    name:"فلافل سادة",
+    price: 1,
+  },
+  {
+    id : 13,
+    name:"صحن حمص",
+    price: 1,
+  },
+  {
+    id : 14,
+    name:"صحن فول",
+    price: 1,
+  },
+  {
+    id: 15,
     name:'لبن اب',
     price:1,
   },
@@ -403,52 +418,52 @@ export const zahran=[
 //five menu drinks
 export const drink = [
   {
-    id:'1',
+    id:1,
     name:'كولا كلوب',
     price:1,
   },
   {
-    id:'9',
+    id:9,
     name:'كولا زيرو',
     price:2,
   },
   {
-    id:'10',
+    id:10,
     name:'كولا دايت',
     price:2,
   },
   {
-    id:'7',
+    id:7,
     name:'سفن اب',
     price:1,
   },
   {
-    id:'2',
+    id:2,
     name:'لبن اب',
     price:1,
   },
   {
-    id:'3',
+    id:3,
     name:'عصير عنب ',
     price:1,
   },
   {
-    id:'4',
+    id:4,
     name:'عصير برتقال ',
     price:1,
   },
   {
-    id:'6',
+    id:6,
     name:'بسكوت',
     price:2,
   },
   {
-    id:'7',
+    id:7,
     name:'شوكلاتة',
     price:1,
   },
   {
-    id:'8',
+    id:8,
     name:'فستق',
     price:1,
   },
@@ -456,22 +471,22 @@ export const drink = [
 //sex menu sweets
 export const sweets = [
   {
-    id:'1',
+    id:1,
     name:'صحن عربية صغير',
     price:3,
   },
   {
-    id:'2',
+    id:2,
     name:' صحن عربية كبير',
     price:5,
   },
   {
-    id:'3',
+    id:3,
     name:'نصف كيلو عربية',
     price:10,
   },
   {
-    id:'4',
+    id:4,
     name:'كيلو عربية',
     price:20,
   },
