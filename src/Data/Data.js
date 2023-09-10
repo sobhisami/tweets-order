@@ -410,7 +410,17 @@ export const zahran=[
     price: 1,
   },
   {
-    id: 15,
+    id : 15,
+    name:"صحن مسبحة فول",
+    price: 2,
+  },
+  {
+    id : 16,
+    name:"صحن مسبحة حمص",
+    price: 2,
+  },
+  {
+    id: 17,
     name:'لبن اب',
     price:1,
   },
