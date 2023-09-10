@@ -258,6 +258,16 @@ export const shopak= [
     name: "فينو بسطرمة + جبنة ك + فلفل",
     price: 2,
   },
+  {
+    id : 36,
+    name:"اضافة فلفل على الطلب",
+    price: 0,
+  },
+  {
+    id : 37,
+    name:"اضافة زيتون على الطلب",
+    price: 0,
+  },
 ];
 //Third menu
 export const altibat=[
