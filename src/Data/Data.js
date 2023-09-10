@@ -455,7 +455,17 @@ export const zahran=[
     price: 2,
   },
   {
-    id: 17,
+    id : 17,
+    name:"اضافة دقة على الطلب",
+    price: 0,
+  },
+  {
+    id : 18,
+    name:"اضافة فلفل على الطلب",
+    price: 0,
+  },
+  {
+    id: 19,
     name:'لبن اب',
     price:1,
   },
