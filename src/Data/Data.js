@@ -253,6 +253,11 @@ export const shopak= [
     name: "  بيتا بطاطا بالجبنة k + فلفل",
     price: 2,
   },
+  {
+    id  :  35,
+    name: "  فينو بسطرمة + k + فلفل ",
+    price: 2,
+  },
 ];
 //Third menu
 export const altibat=[
