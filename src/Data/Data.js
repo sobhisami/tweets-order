@@ -223,6 +223,26 @@ export const shopak= [
     name: "بطاطا بالجبنة ك فينو",
     price: 2.5 ,
   },
+   {
+    id  :  29,
+    name: " بيتا بلدية +زعتر +بندورة  ",
+    price: 1 ,
+  },
+     {
+    id  :  30,
+    name: "  بيتا بلدية +زعتر +بندورة + فلفل ",
+    price: 1 ,
+  },
+       {
+    id  :  31,
+    name: "  بسطرمة +فلفل",
+    price: 1 ,
+  },
+        {
+    id  :  32,
+    name: "فينو جبنة k +زيتون",
+    price: 2,
+  },
 ];
 //Third menu
 export const altibat=[
