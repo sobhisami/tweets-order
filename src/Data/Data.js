@@ -471,7 +471,7 @@ export const zahran=[
   },
   {
     id : 18,
-    name:"اضافة فلفل",
+    name:"اضافة فلفل احمر",
     price: 0,
   },
   {
