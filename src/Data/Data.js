@@ -484,6 +484,11 @@ export const zahran=[
     name:'لبن اب',
     price:1,
   },
+   {
+    id: 21,
+    name:'عصير عنب',
+    price:1,
+  },
 ]
 //five menu drinks
 export const drink = [
