@@ -491,6 +491,12 @@ export const altibat=[
     name:"جبنة مشكل",
     price: 1,
   },
+  {
+    id : 23,
+    name:"عصير حليب موز ",
+    price: 1,
+  },
+  
 ]
 //Fourth menu
 export const zahran=[
