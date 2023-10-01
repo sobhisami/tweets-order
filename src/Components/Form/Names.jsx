@@ -3,6 +3,7 @@ import Select from 'react-select'
 import makeAnimated from 'react-select/animated';
 
 const options = [
+  { value: 'هاني ابو ركان', label: 'هاني ابو ركان' },
   { value: 'اسعد النواجحة', label: 'اسعد النواجحة' },
   { value: 'ابراهيم اللحام', label: 'ابراهيم اللحام' },
   { value: 'عبد العزيز عوض', label: 'عبد العزيز عوض' },
